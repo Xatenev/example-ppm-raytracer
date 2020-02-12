@@ -1,0 +1,13 @@
+a.exe
+a.out
+.vscode
+tags
+.idea
+.gdb_history
+*.o
+
+build/*
+build/*
+
+!build/.gitkeep
+!build/.gitkeep
