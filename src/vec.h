@@ -9,6 +9,7 @@ typedef struct Vec {
 
 Vec* vec_create();
 Vec* vec_create_x_y_z(double x, double y, double z);
-void vec_destroy(Vec* v);
+Vec* vec_subtract(Vec* v1, Vec* v2);
+void vec_destroy(Vec* v, ...);
 
 #endif
