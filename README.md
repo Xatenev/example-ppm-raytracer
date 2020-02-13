@@ -17,5 +17,5 @@ or
 # Test
 
 ```
-feh out.ppm # or any other image viewer
+feh out.ppm 
 ```
