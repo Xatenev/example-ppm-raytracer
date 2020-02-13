@@ -14,7 +14,7 @@ or
 ./build/pr 
 ```
 
-# Test
+# Test with your favorite image viewer
 
 ```
 feh out.ppm 
