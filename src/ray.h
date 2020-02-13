@@ -10,6 +10,6 @@ typedef struct Ray
 } Ray;
 
 Ray *ray_create(Vec *origin, Vec *direction);
-void ray_destroy(Ray *ray, ...);
+void ray_destroy(Ray *ray);
 
 #endif

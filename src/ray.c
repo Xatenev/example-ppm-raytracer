@@ -12,11 +12,8 @@ Ray *ray_create(Vec *origin, Vec *direction)
     return r;
 }
 
-void ray_destroy(Ray *ray, ...)
+void ray_destroy(Ray *ray)
 {
-    va_list args;
-    va_start(args, ray);
-    Ray *r = va_arg(args, Ray *);
-    free(r);
-    va_end(args);
+    free(ray);
+    ray = NULL;
 }

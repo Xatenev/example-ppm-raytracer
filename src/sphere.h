@@ -12,7 +12,7 @@ typedef struct Sphere
 } Sphere;
 
 Sphere *sphere_create(Vec *center, double radius);
-bool sphere_intersect(Sphere *sphere, Ray* ray, double t);
-void sphere_destroy(Sphere *sphere, ...);
+bool sphere_intersect(Sphere *sphere, Ray* ray, double *t);
+void sphere_destroy(Sphere *sphere);
 
 #endif

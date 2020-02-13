@@ -11,3 +11,5 @@ build/*
 
 !build/.gitkeep
 !build/.gitkeep
+
+*.ppm

@@ -2,7 +2,7 @@ NAME=pr
 
 CC=gcc
 CFLAGS=-Wall
-LDFLAGS=-pthread
+LDFLAGS=-lm
 
 SRC_DIR=src
 OBJ_DIR=build

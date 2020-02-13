@@ -16,7 +16,7 @@ Sphere *sphere_create(Vec *center, double radius)
     return s;
 }
 
-bool sphere_intersect(Sphere *sphere, Ray *ray, double t)
+bool sphere_intersect(Sphere *sphere, Ray *ray, double *t)
 {
     Vec *origin = ray->origin;
     Vec *direction = ray->direction;
@@ -26,7 +26,7 @@ bool sphere_intersect(Sphere *sphere, Ray *ray, double t)
 
     // @TODO: understand this
     double b = 2 * dot_product(oc, direction);
-    double c = dot_product(oc, oc);
+    double c = dot_product(oc, oc) - sphere->radius*sphere->radius;
     double disc = b * b - 4 * c;
 
     if (disc < 0)
@@ -37,7 +37,7 @@ bool sphere_intersect(Sphere *sphere, Ray *ray, double t)
         double t0 = -b - disc;
         double t1 = -b + disc;
 
-        t = t0 < t1 ? t0 : t1;
+        *t = t0 < t1 ? t0 : t1;
 
         return true;
     }
@@ -45,11 +45,8 @@ bool sphere_intersect(Sphere *sphere, Ray *ray, double t)
     return false;
 }
 
-void sphere_destroy(Sphere *sphere, ...)
+void sphere_destroy(Sphere *sphere)
 {
-    va_list args;
-    va_start(args, sphere);
-    Sphere *s = va_arg(args, Sphere *);
-    free(s);
-    va_end(args);
+    free(sphere);
+    sphere = NULL;
 }
