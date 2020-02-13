@@ -8,9 +8,9 @@ make
 
 ```
 make run
-
+```
 or 
-
+```
 ./build/pr 
 ```
 
