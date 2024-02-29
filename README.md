@@ -1,3 +1,6 @@
+# PPM Raytracer
+A raytracer for educational purposes that outputs a ppm file viewable in your favorite image viewer.
+
 # Compile
 
 ```
